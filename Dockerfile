@@ -13,7 +13,6 @@ RUN apt update -y \
     && sed -i 's/username_here/admin/g' /var/www/html/wp-config.php \
     && sed -i 's/password_here/Qwert123/g' /var/www/html/wp-config.php \
     && sed -i 's/localhost/database-1.cp35ofbjjbaa.us-east-1.rds.amazonaws.com/g' /var/www/html/wp-config.php
-
 EXPOSE 3306
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
